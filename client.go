@@ -76,6 +76,13 @@ func NewClient(options ...func(*Client)) (*Client, error) {
 
 // Optional settings
 
+// WithBaseUrl is an option to provide a different base url for the Client.
+func WithBaseUrl(baseUrl string) func(*Client) {
+	return func(c *Client) {
+		c.BaseUrl = baseUrl
+	}
+}
+
 // WithApiKey is an option to provide an API key for the Client.
 func WithApiKey(apiKey string) func(*Client) {
 	return func(c *Client) {
