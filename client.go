@@ -79,7 +79,7 @@ func NewClient(options ...func(*Client)) (*Client, error) {
 // WithBaseUrl is an option to provide a different base url for the Client.
 func WithBaseUrl(baseUrl string) func(*Client) {
 	return func(c *Client) {
-		c.BaseUrl = baseUrl
+		c.baseURL = baseUrl
 	}
 }
 
